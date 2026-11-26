@@ -13,7 +13,6 @@ The governance and analytics dashboard for the Oeconomia DAO ecosystem. Track OE
 | Governance     | Proposals, voting (For/Against/Abstain), delegation, quorum tracking |
 | Portfolio      | User DeFi positions and holdings across ecosystem protocols          |
 | Ecosystem      | Links to all Oeconomia protocols with TVL and APY metrics            |
-| Presale        | OEC token presale interface with USDC conversion                     |
 
 ## Supported Protocols
 

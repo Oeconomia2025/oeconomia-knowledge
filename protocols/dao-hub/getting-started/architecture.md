@@ -19,7 +19,6 @@ High-level overview of the OEC DAO Hub architecture and data flow.
 │   Sepolia RPC    │    │   Netlify Serverless Funcs   │
 │   (Alchemy)      │    │   (20 endpoints)             │
 │                  │    │                              │
-│  - Presale       │    │  - Token data & history      │
 │  - Wallet reads  │    │  - Volume analytics          │
 │                  │    │  - Portfolio tracking         │
 └──────────────────┘    │  - Holder information        │
@@ -48,7 +47,6 @@ client/src/
 │   ├── governance.tsx   # DAO proposals, voting, delegation
 │   ├── portfolio.tsx    # User DeFi positions
 │   ├── ecosystem.tsx    # Protocol links and metrics
-│   └── presale.tsx      # Token presale interface
 ├── components/          # Reusable UI components
 │   ├── layout.tsx       # Collapsible sidebar layout
 │   ├── wallet-connect.tsx
@@ -56,9 +54,7 @@ client/src/
 │   ├── ecosystem-sidebar.tsx
 │   └── ...
 ├── hooks/               # Custom React hooks
-│   └── use-presale.ts   # Presale contract interactions
 ├── services/            # Business logic and ABIs
-│   └── presale-contract.ts
 ├── lib/                 # Wagmi config, query client
 │   └── wagmi.ts
 └── App.tsx              # Router and providers
@@ -92,7 +88,6 @@ shared/
 ## Data Flow
 
 1. **Token & Market Data**: Netlify functions query Neon PostgreSQL (cached from Live Coin Watch / CoinGecko syncs) and return JSON to the frontend
-2. **Blockchain Interactions**: Wagmi hooks read presale contract state directly from Sepolia via Alchemy RPC
 3. **Governance**: Currently uses mock data for UI development; will connect to on-chain governance contracts
 4. **Analytics**: Aggregated from database snapshots with protocol-level filtering
 

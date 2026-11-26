@@ -8,11 +8,12 @@ websites so every channel says the same thing.
 | Path | What it holds |
 |---|---|
 | `overview.md` | What Oeconomia is, the protocols, and how they connect |
-| `tokenomics.md` | OEC supply, allocation, presale terms (one place only) |
+| `tokenomics.md` | Public OEC token details (one place only) |
 | `contracts.md` | Every live Sepolia contract address |
 | `faq.md` | Short answers to common questions |
 | `protocols/<name>/` | Per-protocol docs (features, how-tos, contract notes) |
 | `bot/guidelines.md` | Rules the chat bot must follow when answering |
+| `internal/` | Unannounced material (full tokenomics, sale page notes). Never loaded by the bot |
 
 ## Rules
 - **Public content only.** No keys, `.env` values, private plans, or unreleased numbers.

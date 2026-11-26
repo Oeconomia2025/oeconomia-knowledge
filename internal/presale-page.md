@@ -1,3 +1,5 @@
+> **INTERNAL. Not loaded by the chat bot and not public.** Unannounced; publish only when Jason announces it.
+
 # Presale
 
 OEC token presale interface for early supporters.

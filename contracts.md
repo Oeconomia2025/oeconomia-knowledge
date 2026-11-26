@@ -35,5 +35,4 @@ Explorer: https://sepolia.etherscan.io
 | OEC Faucet | `0x29c900b48079634e5b1e19508fa347340ee786bb` |
 
 ## Not yet deployed
-- OEC presale contract
 - DAO governor

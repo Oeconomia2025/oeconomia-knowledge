@@ -15,13 +15,15 @@ admin pages. Those repo docs are developer-facing; when rewriting, make them use
 - Public information only. No secrets, env values, or unreleased plans.
 - One fact, one place: tokenomics only in `tokenomics.md`, addresses only in `contracts.md`.
   Elsewhere, link to them. If you find a conflicting number anywhere, flag it to Jason.
-- `tokenomics.md` has a DRAFT banner until Jason confirms the figures. Don't remove it
-  without his explicit confirmation.
+- **No presale mentions in anything the bot loads.** The presale is unannounced. Full
+  tokenomics and sale notes live in `internal/`, which the bot never loads. Move them back
+  out only when Jason says it's announced.
 - Keep total size small (target under ~60k tokens) so the bot can load everything with
   prompt caching instead of needing RAG.
 
 ## Chat bot loading (for the bot repo)
-- On startup: read every `.md` file except `CLAUDE.md` and `README.md`, in a stable order
+- On startup: read every `.md` file except `CLAUDE.md`, `README.md` and anything under
+  `internal/`, in a stable order
   (`bot/guidelines.md` first, then `overview.md`, `tokenomics.md`, `contracts.md`,
   `faq.md`, then `protocols/**`), join with file-path headers, and send as a cached
   system prompt block.
@@ -29,7 +31,8 @@ admin pages. Those repo docs are developer-facing; when rewriting, make them use
   reload endpoint). Poll the latest commit SHA hourly as a fallback.
 
 ## Open items
-- Confirm tokenomics (see `tokenomics.md` open items), then remove the DRAFT banner.
+- At announcement: confirm `internal/tokenomics.md`, move it back to `tokenomics.md`, and
+  update `bot/guidelines.md` and `faq.md`.
 - Retire or update oeconomia.tech/tokeninfo (old 100M / 5% fee figures).
-- Add DAO governor and presale contract to `contracts.md` once deployed.
+- Add the DAO governor to `contracts.md` once deployed.
 - Add points program details once Season 1 is live.

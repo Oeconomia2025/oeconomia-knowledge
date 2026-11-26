@@ -10,12 +10,8 @@ the staking site.
 **What is ALUD?**
 A USD-pegged stablecoin minted by depositing collateral on Alluria. See `protocols/alluria/`.
 
-**When is the presale?**
-The presale page is built and marked "coming soon"; the presale contract is not deployed
-yet. Terms are in `tokenomics.md`. Only use links from official Oeconomia channels.
-
 **Is the old 100M supply / 5% fee information correct?**
-No. That page is outdated. Current figures are in `tokenomics.md`.
+No. That page is outdated. Final tokenomics will be published at launch.
 
 **Are there points or rewards for testing?**
 A testnet points program is being prepared. Points are a participation record and carry
